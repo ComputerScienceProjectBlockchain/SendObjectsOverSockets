@@ -24,8 +24,13 @@ public class Client {
         messages.add(new Message("What time is it?"));
         messages.add(new Message("Hi hi hi hi."));
 
+        List<Block> blockchain = new ArrayList<>();
+        blockchain.add(new Block("First block", "0"));
+        blockchain.add(new Block("Second block", blockchain.get(blockchain.size() - 1).hash));
+        blockchain.add(new Block("Third block", blockchain.get(blockchain.size() - 1).hash));
+
         System.out.println("Sending messages to the ServerSocket");
-        objectOutputStream.writeObject(messages);
+        objectOutputStream.writeObject(blockchain);
 
         System.out.println("Closing socket and terminating program.");
         socket.close();

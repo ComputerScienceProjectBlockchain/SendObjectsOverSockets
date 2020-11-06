@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.Date;
 
-public class Block {
+public class Block implements Serializable {
 
     public String hash;
     public String previousHash;
@@ -38,4 +39,18 @@ public class Block {
         System.out.println("Block Mined!!! : " + hash);
     }
 
+    @Override
+    public String toString() {
+        return "Block{" +
+                "hash='" + hash + '\'' +
+                ", previousHash='" + previousHash + '\'' +
+                ", data='" + data + '\'' +
+                ", timeStamp=" + timeStamp +
+                ", nonce=" + nonce +
+                '}';
+    }
+
+    public String getData() {
+        return data;
+    }
 }

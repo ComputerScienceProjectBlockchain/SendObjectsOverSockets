@@ -24,6 +24,7 @@ public class BlockchainSimple {
         String blockchainJson = StringUtil.getJson(blockchain);
         System.out.println("\nThe block chain: ");
         System.out.println(blockchainJson);
+
     }
 
     public static Boolean isChainValid() {
