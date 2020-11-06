@@ -9,7 +9,7 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         // need host and port, we want to connect to the ServerSocket at port 7777
-        Socket socket = new Socket("172.20.10.2", 7777);
+        Socket socket = new Socket("localhost", 7777);
         System.out.println("Connected!"); //172.20.10.2
 
         // get the output stream from the socket.
